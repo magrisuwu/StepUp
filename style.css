@@ -1,0 +1,398 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171717;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background: #111111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navegacion {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #f5b400;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f5b400;
+}
+
+.boton-menu {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* PORTADA */
+.portada {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.85), rgba(0,0,0,.2)),
+        url("https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?w=1600")
+        center/cover no-repeat;
+    color: white;
+}
+
+.portada-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.subtitulo {
+    color: #d69c00;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.portada h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.portada-contenido > p:not(.subtitulo) {
+    max-width: 520px;
+    margin-bottom: 30px;
+    color: #eeeeee;
+}
+
+.boton {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #f5b400;
+    color: #111111;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+.seccion {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-seccion h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion > p:last-child {
+    color: #777777;
+}
+
+/* PRODUCTOS */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-producto {
+    background: #f6f6f6;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.10);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-info {
+    padding: 22px;
+}
+
+.producto-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.producto-info p {
+    color: #777777;
+    margin-bottom: 12px;
+}
+
+.producto-info span {
+    font-size: 19px;
+    font-weight: bold;
+    color: #b47e00;
+}
+
+/* SERVICIOS */
+.servicios {
+    background: #111111;
+    color: white;
+}
+
+.servicios .titulo-seccion > p:last-child {
+    color: #cccccc;
+}
+
+.lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-servicio {
+    background: #202020;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid #f5b400;
+    transition: 0.3s;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+    background: #292929;
+}
+
+.icono {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-servicio h3 {
+    margin-bottom: 10px;
+}
+
+.tarjeta-servicio p {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* GALERÍA */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+/* UBICACIÓN Y CONTACTO */
+.ubicacion {
+    background: #f5f5f5;
+}
+
+.mapa {
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.redes {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.redes h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.redes p {
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.botones-redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.botones-redes a {
+    background: #111111;
+    color: white;
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.botones-redes a:hover {
+    background: #d69c00;
+    color: #111111;
+}
+
+/* PIE DE PÁGINA */
+.pie {
+    background: #111111;
+    color: #cccccc;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.pie .logo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.pie p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 850px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lista-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navegacion {
+        min-height: 65px;
+    }
+
+    .boton-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #111111;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 5%;
+    }
+
+    .menu.activo {
+        display: flex;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 13px 0;
+    }
+
+    .portada {
+        min-height: 520px;
+    }
+
+    .portada h1 {
+        font-size: 43px;
+    }
+
+    .productos,
+    .lista-servicios,
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-producto img {
+        height: 250px;
+    }
+
+    .galeria img {
+        height: 280px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 27px;
+    }
+
+    .seccion {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
